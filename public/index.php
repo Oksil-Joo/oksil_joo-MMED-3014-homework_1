@@ -1,8 +1,3 @@
-<?php
-session_start();
-
-include '../includes/functions.php';
-?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,14 +11,13 @@ include '../includes/functions.php';
     <header id="container">
         <h1 class="hidden">logo</h1>
         <section id="top">
-                <?php
-                include '../includes/partials/headers.php'
-                ?>
-            <div id="navigation">
-                <?php
-                include '../includes/partials/navigation.php'
-                ?>
-            </div>
+            <?php
+            include '../includes/partials/headers.php'
+            ?>
+            
+             <?php
+            include '../includes/partials/navigation.php'
+            ?>
         </section>
     </header>
     <main>
@@ -33,7 +27,7 @@ include '../includes/functions.php';
                 <img src="images/open.svg" alt="open">
             </div>
             <div class="title">
-                <p class="role">UI/US Designer</p>
+                <p class="role">UI/UX Designer</p>
                 <p class="name">OKSIL JOO</p>
                 <p class="role">PORTFOLIO</p>
             </div>
