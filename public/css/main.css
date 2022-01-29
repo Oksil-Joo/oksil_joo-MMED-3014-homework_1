@@ -213,23 +213,17 @@ button:hover {
     justify-content: right;
 }
 
-.workData {
-    width: 263px;
-    margin: 0 auto;
-    padding: 0 auto;
-}
 .listCon {
     width: 100%;
     margin: 0 auto;
     padding: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     margin-bottom: 20px;
 }
-
 .workData h2 {
     font-size: 20px;
     font-weight: bold;
     margin: 20px 0px 10px 0px;
+}
+.workData p {
+    margin-bottom: 40px;
 }

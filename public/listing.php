@@ -45,17 +45,18 @@
         <h1 class="hidden">mainTitle</h1>
         <p class="subtitle">PORTFOLIO</p>
         <section class="listCon">
-            <div class="workData">
+           <div class="workData">
                 <?php
                     foreach ($myData as $data) {
                 ?>
                     <img src="<?php echo $data['image']; ?>" alt="LogoDesign">
                     <h2><?php echo $data['title']; ?> </h2>
-                    <p><?php echo $data['descrioption'];?></p>
+                    <p><?php echo $data['descrioption'];?>  </p>
+
                 <?php
                     }
                 ?>  
-            </div>
+           </div>
         </section>
     </main>
         <?php
