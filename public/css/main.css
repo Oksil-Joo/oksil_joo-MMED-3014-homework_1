@@ -85,43 +85,69 @@ text-align: center;
 
 .name {
     font-size: 100px;
-    color: #000;
+    color: #9BB731;
     font-weight: bold;
     margin: 20px 0px;
 }
 
-.subtitle {
-    font-size: 40px;
-    color: #000;
-    text-align: center;
-}
 .footer {
+    width: 100%;
+    height: 10px;
     font-size: 16px;
     color: #707070;
     text-align: center;
+    border-top: 1px solid #707070;
+    padding-top: 10px;
 }
 
-.workData {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 263px;
-    margin: 0 auto;
-    padding: 0 auto;
-}
 
-form {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	margin: 0;
+.subtitle {
+    font-size: 40px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
 }
-
 input[type=text] {
     width: 340px;
     background-color: #E8E8E8;
     color: #6C6C6C;
-    padding-left: 20px;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+}
+
+form {
+    display: flex;
+	flex-direction: column;
+	flex-wrap:nowrap;
+	margin: 0;
+}
+
+.formCon{
+    width: 340px;
+}
+
+input[type=text] {
+    width: 340px;
+    height: 30px;
+    background-color: #E8E8E8;
+    color: #6C6C6C;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 5px;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+}
+
+input[type=email] {
+    width: 340px;
+    background-color: #E8E8E8;
+    color: #6C6C6C;
     border-radius: 30px;
     border: none;
     margin-bottom: 10px;
@@ -133,8 +159,7 @@ input[type=text] {
 textarea {
     width: 340px;
     height: 150px;
-    padding: 5px;
-    padding-left: 20px;
+    padding: 25px;
     border-radius: 30px;
     border: none;
     resize:none;
@@ -144,8 +169,67 @@ textarea {
     background-color: #E8E8E8;
     color: #6C6C6C;
 }
-.formCon{
-    width: 550px;
-    margin: 0;
-    padding: 0;
+.contactCon {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.contactCon img {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.button {
+    background-color: #9BB731;
+    width: 60px;
+    height: 60px;
+    border: none;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+  }
+
+.circle {
+    border-radius: 50%;
+}
+
+button:hover {
+    background-color: #EB6896;
+}
+
+.buttonCon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.workData {
+    width: 263px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.listCon {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.workData h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0px 10px 0px;
 }

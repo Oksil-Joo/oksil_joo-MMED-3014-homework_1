@@ -33,7 +33,7 @@
                 <p class="role">PORTFOLIO</p>
             </div>
             <div class="open">
-                <img src="images/close.svg" alt="open">
+                <img src="images/close.svg" alt="close">
             </div>
         </section>
     </main>

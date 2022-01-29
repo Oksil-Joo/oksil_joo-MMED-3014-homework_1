@@ -24,6 +24,7 @@ $_SESSION['errors'] = [];
 $_SESSION['submission'] = [];
 
 // var_dump($_SESSION);
+
 ?>
 <html lang="en">
 <head>
@@ -49,24 +50,29 @@ $_SESSION['submission'] = [];
         </section>
     </header>
     <main>
-        <section class="mainCon">
-        <div class="formCon">
-            <form action="../includes/submit.php" method="POST">
-            <p class="subtitle">GET IN TOUCH</p>
-                <input type="text" name="first_name" placeholder="First Name" value="<?php echo $firstNameSubmission; ?>">
-                <?php echo $firstNameError; ?>
-                <input type="text" name="last_name" placeholder="Last Name" value="<?php echo $lastNameSubmission; ?>">
-                <?php echo $lastNameError; ?>
-                <input type="text" name="phone" placeholder="Your Phone number" value="<?php echo $phoneSubmission; ?>">
-                <input type="text" name="email" placeholder="Your E-mail" value="<?php echo $emailSubmission; ?>">
-                <?php echo $emailError; ?>
-                <input type="text"name="website" placeholder="What's your website?" value="<?php echo $websiteSubmission; ?>">
-                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Your Message" value="<?php echo $commentSubmission; ?>"></textarea>
-                <br>
-                <button type="submit">submit</button>
-            </form>
+        <h2 class="subtitle">GET IN TOUCH</h2>
+        <section class="contactCon">
+            <div><img src="images/mail.svg" alt="mailImage"></div>
+            <div class="formCon">
+                <form action="../includes/submit.php" method="POST">
+                    <input type="text" name="first_name" placeholder="First Name" value="<?php echo $firstNameSubmission; ?>">
+                    <?php echo $firstNameError; ?>
+                    <input type="text" name="last_name" placeholder="Last Name" value="<?php echo $lastNameSubmission; ?>">
+                    <?php echo $lastNameError; ?>
+                    <input type="text" name="phone" placeholder="Your phone number" value="<?php echo $phoneSubmission; ?>">
+                    <?php echo $phoneError; ?>
+                    <input type="text" name="email" placeholder="Your E-mail" value="<?php echo $emailSubmission; ?>">
+                    <?php echo $emailError; ?>
+                    <input type="text"name="website" placeholder="What's your website?" value="<?php echo $websiteSubmission; ?>">
+                    <?php echo $websiteError; ?>
+                    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Your Message" value="<?php echo $commentSubmission; ?>"></textarea>
+                    <?php echo $commentError; ?>
+                    <div class="buttonCon">
+                         <button class="button circle" type="submit">Send</button>
+                    </div>
+                </form>
           
-        </div>
+            </div>
         </section>
     </main>
     <?php

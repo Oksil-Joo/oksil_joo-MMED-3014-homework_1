@@ -42,27 +42,24 @@
         </section>
     </header>
     <main>
-        <section class="mainCon">
-            <h1 class="hidden">mainTitle</h1>
-            <p class="subtitle">PORTFOLIO</p>
-            <?php
-                foreach ($myData as $data) {
-            ?>
-            <p class="workData">
+        <h1 class="hidden">mainTitle</h1>
+        <p class="subtitle">PORTFOLIO</p>
+        <section class="listCon">
+            <div class="workData">
                 <?php
-                    echo $data['image'];
-                    echo $data['title'];
-                    echo $data['descrioption'];
+                    foreach ($myData as $data) {
                 ?>
-            </p>
-            <?php
-            }
-            ?>  
+                    <img src="<?php echo $data['image']; ?>" alt="LogoDesign">
+                    <h2><?php echo $data['title']; ?> </h2>
+                    <p><?php echo $data['descrioption'];?></p>
+                <?php
+                    }
+                ?>  
+            </div>
         </section>
     </main>
-    <?php
-     include '../includes/partials/footers.php'
-     ?>
-     </div>
+        <?php
+            include '../includes/partials/footers.php'
+        ?>
 </body>
 </html>
