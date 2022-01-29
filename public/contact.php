@@ -9,16 +9,21 @@ $shouldShowSubmission = shouldShowSubmissionData();
 $firstNameError = getErrorFromSession('first_name');
 $lastNameError = getErrorFromSession('last_name');
 $emailError = getErrorFromSession('email');
+$phoneError = getErrorFromSession('phone');
+$websiteError = getErrorFromSession('website');
+$commentError = getErrorFromSession('comment');
 
 $firstNameSubmission = getSubmissionFromSession('first_name');
 $lastNameSubmission = getSubmissionFromSession('last_name');
 $emailSubmission = getSubmissionFromSession('email');
+$phoneSubmission = getSubmissionFromSession('phone');
+$websiteSubmission = getSubmissionFromSession('website');
+$commentSubmission = getSubmissionFromSession('comment');
 
 $_SESSION['errors'] = [];
 $_SESSION['submission'] = [];
 
 // var_dump($_SESSION);
-
 ?>
 <html lang="en">
 <head>
@@ -45,57 +50,23 @@ $_SESSION['submission'] = [];
     </header>
     <main>
         <section class="mainCon">
-        <form action="../includes/submit.php" method="POST">
-        <input type="text" name="first_name" value="<?php echo $firstNameSubmission; ?>">
-        <?php echo $firstNameError; ?>
-        <br>
-        <input type="text" name="last_name" value="<?php echo $lastNameSubmission; ?>">
-        <?php echo $lastNameError; ?>
-        <br>
-        <input type="text" name="email" value="<?php echo $emailSubmission; ?>">
-        <?php echo $emailError; ?>
-        <br>
-        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
-        <input type="text" name="phone">
-        <button type="submit">submit</button>
-    </form>
-    
-    <?php
-        if ($shouldShowSubmission) {
-    ?>
-    
-    <div>
-        <h2>Your submission</h2>
-        <p>
-            <?php
-                echo $firstName;
-            ?>
-        </p>
-        <p>
-             <?php
-                echo $lastName;
-            ?>
-        </p>
-        <p>
-            <?php
-                echo $email;
-            ?>
-        </p>
-        <p>
-            <?php
-                echo $comments;
-            ?>
-        </p>
-        <p>
-            <?php
-                echo $phone;
-            ?>
-        </p>
-    </div>
-
-    <?php
-        }
-    ?>
+        <div class="formCon">
+            <form action="../includes/submit.php" method="POST">
+            <p class="subtitle">GET IN TOUCH</p>
+                <input type="text" name="first_name" placeholder="First Name" value="<?php echo $firstNameSubmission; ?>">
+                <?php echo $firstNameError; ?>
+                <input type="text" name="last_name" placeholder="Last Name" value="<?php echo $lastNameSubmission; ?>">
+                <?php echo $lastNameError; ?>
+                <input type="text" name="phone" placeholder="Your Phone number" value="<?php echo $phoneSubmission; ?>">
+                <input type="text" name="email" placeholder="Your E-mail" value="<?php echo $emailSubmission; ?>">
+                <?php echo $emailError; ?>
+                <input type="text"name="website" placeholder="What's your website?" value="<?php echo $websiteSubmission; ?>">
+                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Your Message" value="<?php echo $commentSubmission; ?>"></textarea>
+                <br>
+                <button type="submit">submit</button>
+            </form>
+          
+        </div>
         </section>
     </main>
     <?php

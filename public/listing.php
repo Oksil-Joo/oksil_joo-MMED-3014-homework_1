@@ -2,19 +2,19 @@
 
     $myData = [
         [
-            'title' => 'Hello, world',
-            'image' => 'http://placekitten.com/200/300',
-            'descrioption' => 'here is my information1'
+            'title' => 'Oksil Joo',
+            'image' => 'images/oksiljoo.jpg',
+            'descrioption' => 'The initials of the JOS log were derived from the first letter of the name, and the shape of the circle was emphasized using O. In particular, the colour represents personality, yellow-green symbolizes nature as a lear-like colour of a plant, means harmony of self-control, and light rose pink represents a calm personality as a color of healing and relaxation.'
         ],
         [
-            'title' => 'Hello, world2',
-            'image' => 'http://placekitten.com/200/300',
-            'descrioption' => 'here is my information2'
+            'title' => 'Korean Food',
+            'image' => 'images/korean.jpg',
+            'descrioption' => 'Bibimbap is famous among the foods representing Korean food. This menu is also served by Korean Air. This bibimbap is a food eaten with rice, vegetables, eggs, and red pepper paste sauce in an earthen pot, and yellow means eggs, red means red pepper paste, and brown means earthen pot to represent this food.'
         ],
         [
-            'title' => 'Hello, worldnumber3',
-            'image' => 'http://placekitten.com/200/300',
-            'descrioption' => 'here is my information3'
+            'title' => 'Alexander Keith',
+            'image' => 'images/alexander.jpg',
+            'descrioption' => 'The name of Alexander Keith beer comes from the founders name. Therefore, it is easier to understand the brand name and can help you understand the word mark by showing the founders face.'
         ]
     ];
 ?>
@@ -44,13 +44,14 @@
     <main>
         <section class="mainCon">
             <h1 class="hidden">mainTitle</h1>
+            <p class="subtitle">PORTFOLIO</p>
             <?php
                 foreach ($myData as $data) {
             ?>
             <p class="workData">
                 <?php
-                    echo $data['title'];
                     echo $data['image'];
+                    echo $data['title'];
                     echo $data['descrioption'];
                 ?>
             </p>

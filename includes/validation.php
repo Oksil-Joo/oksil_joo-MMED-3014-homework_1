@@ -31,6 +31,19 @@ function isLastNameValid($lastName)
     return true;
 }
 
+function isPhoneValid($phone) 
+{
+    if (isEmpty($phone)) {
+        return false;
+    }
+    
+    if(strlen($phone) < 9 ) {
+        return false;
+    }
+
+    return true;
+}
+
 function isEmailValid($email) 
 {
     if (isEmpty($email)) {
@@ -42,6 +55,36 @@ function isEmailValid($email)
     }
 
     if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        return false;
+    }
+
+    return true;
+}
+
+function isWebsiteValid($website) 
+{
+    if (isEmpty($website)) {
+        return false;
+    }
+    
+    if(strlen($website) < 9 ) {
+        return false;
+    }
+
+    if (! filter_var($website, FILTER_VALIDATE_URL)) {
+        return false;
+    }
+
+    return true;
+}
+
+function isCommentValid($comment) 
+{
+    if (isEmpty($comment)) {
+        return false;
+    }
+    
+    if(strlen($comment) < 11 ) {
         return false;
     }
 
