@@ -28,7 +28,8 @@
     <title>Multi-page PHP site</title>
 </head>
 <body>
-    <header id="container">
+<div id="container">
+    <header>
         <h1 class="hidden">logo</h1>
         <section id="top">
             <?php
@@ -46,7 +47,7 @@
             <?php
                 foreach ($myData as $data) {
             ?>
-            <p>
+            <p class="workData">
                 <?php
                     echo $data['title'];
                     echo $data['image'];
@@ -61,5 +62,6 @@
     <?php
      include '../includes/partials/footers.php'
      ?>
+     </div>
 </body>
 </html>

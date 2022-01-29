@@ -30,7 +30,8 @@ $_SESSION['submission'] = [];
     <title>Multi-page PHP site</title>
 </head>
 <body>
-    <header id="container">
+<div id="container">
+    <header>
         <h1 class="hidden">logo</h1>
         <section id="top">
             <?php
@@ -54,8 +55,8 @@ $_SESSION['submission'] = [];
         <input type="text" name="email" value="<?php echo $emailSubmission; ?>">
         <?php echo $emailError; ?>
         <br>
-        <!-- <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
-        <input type="text" name="phone"> -->
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+        <input type="text" name="phone">
         <button type="submit">submit</button>
     </form>
     
@@ -100,5 +101,6 @@ $_SESSION['submission'] = [];
     <?php
      include '../includes/partials/footers.php'
      ?>
+     </div>
 </body>
 </html>

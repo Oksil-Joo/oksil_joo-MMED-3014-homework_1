@@ -8,7 +8,8 @@
     <title>Multi-page PHP site</title>
 </head>
 <body>
-    <header id="container">
+    <div id="container">
+    <header>
         <h1 class="hidden">logo</h1>
         <section id="top">
             <?php
@@ -39,5 +40,6 @@
     <?php
      include '../includes/partials/footers.php'
      ?>
+     </div>
 </body>
 </html>
