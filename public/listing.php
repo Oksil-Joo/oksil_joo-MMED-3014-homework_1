@@ -1,5 +1,5 @@
 <?php
-
+//Define the data to be sorted
     $myData = [
         [
             'title' => 'Oksil Joo',
@@ -32,10 +32,10 @@
     <header>
         <h1 class="hidden">logo</h1>
         <section id="top">
+            <!-- Connect the commonly used part by making a different page. -->
             <?php
             include '../includes/partials/headers.php'
-            ?>
-            
+            ?>            
              <?php
             include '../includes/partials/navigation.php'
             ?>
@@ -46,11 +46,15 @@
         <p class="subtitle">PORTFOLIO</p>
         <section class="listCon">
            <div class="workData">
+           <!-- The foreach loop works only on arrays, and is used to loop through each key/value pair in an array. -->
                 <?php
                     foreach ($myData as $data) {
                 ?>
+                <!-- Imports image data from mydata. -->
                     <img src="<?php echo $data['image']; ?>" alt="LogoDesign">
+                <!-- Imports title data from mydata. -->
                     <h2><?php echo $data['title']; ?> </h2>
+                <!-- Imports descrioption data from mydata. -->
                     <p><?php echo $data['descrioption'];?>  </p>
 
                 <?php
@@ -59,6 +63,7 @@
            </div>
         </section>
     </main>
+    <!-- Connect the commonly used part by making a different page. -->
         <?php
             include '../includes/partials/footers.php'
         ?>

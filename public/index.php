@@ -12,6 +12,7 @@
     <header>
         <h1 class="hidden">logo</h1>
         <section id="top">
+             <!-- Connect the commonly used part by making a different page. -->
             <?php
             include '../includes/partials/headers.php'
             ?>
@@ -37,6 +38,7 @@
             </div>
         </section>
     </main>
+     <!-- Connect the commonly used part by making a different page. -->
     <?php
      include '../includes/partials/footers.php'
      ?>
